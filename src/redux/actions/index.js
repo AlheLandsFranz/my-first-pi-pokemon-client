@@ -1,15 +1,15 @@
 // import axios from 'axios';
-const baseUrl = "https://pi-pokemon-alhena-landsman.herokuapp.com/"
+const baseUrl = "https://pi-pokemon-alhena-landsman.herokuapp.com"
 
 export function getAllPokemons(){
-    return async (dispatch) => fetch(baseUrl + "pokemons") 
+    return async (dispatch) => fetch(baseUrl + "/pokemons") 
         .then(response => response.json()) 
         .then(data => dispatch({ type: 'GET_ALL_POKEMONS', payload: data }))
         .catch(e => console.log(e))
 }
 
 export function getAllTypes(){
-    return async (dispatch) => fetch(baseUrl + "types")
+    return async (dispatch) => fetch(baseUrl + "/types")
         .then(response => response.json())
         .then(data => dispatch({ type: 'GET_ALL_TYPES', payload: data }))
         .catch(e => console.log(e))
@@ -17,7 +17,7 @@ export function getAllTypes(){
 
 export function postPokemon(payload){
     return async () => {
-        return fetch(baseUrl + "pokemons", {
+        return fetch(baseUrl + "/pokemons", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export function getPokemonByType(payload){
 
 export function getPokemonDetail(id){
     return async function(dispatch){
-        return fetch(baseUrl + "pokemons/"+id)
+        return fetch(baseUrl + "/pokemons/"+id)
         .then(response => response.json())
         .then(data => dispatch({type: 'GET_POKEMON_DETAIL', payload: data})
         )
@@ -53,7 +53,7 @@ export function getPokemonDetail(id){
 }
 export function deletePokemon(payload){
     return async function(dispatch){
-        return fetch(baseUrl + "clear/"+payload, {
+        return fetch(baseUrl + "/clear/"+payload, {
                 method: 'DELETE'}) 
         .then(response => response.json())         
         .then( () => dispatch({type: 'DELETE_POKEMON'}))
@@ -70,7 +70,7 @@ export function clearDetail(){
 
 export function searchByName(name){
     return async function(dispatch){
-        return fetch(baseUrl + "pokemons?name="+name) 
+        return fetch(baseUrl + "/pokemons?name="+name) 
         .then(response => response.json())         
         .then(data => dispatch({type: 'SEARCH_BY_NAME', payload: data})
         )
