@@ -1,0 +1,66 @@
+.detail{
+    background-image: url('./../Home/fondo.png');
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+width: 100%;
+min-height: 890px;
+}
+
+.pokeDetail h1{
+    font-family: 'Small Pixel-7';
+    font-size: 65px;
+    font-weight: lighter;
+    padding: 0%;
+    margin: 0%;
+}
+
+.pokeDetail{
+    font-family: 'Small Pixel-7';
+    backdrop-filter: blur(16px) saturate(180%);
+    color: aliceblue;
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(236,167,37);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 64px;
+    margin: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pokeDetail p{
+    font-size: 30px;
+    margin: 0%;
+}
+.pokeDetail img{
+    padding: 5%;
+    width: 10em;
+}
+
+/* .detail .error{
+    font-family: 'Small Pixel-7';
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(236,167,37);;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 30px;
+    margin: 10px;
+    color: aliceblue;
+} */
+
+.detail .gif{
+    border-radius: 35%;
+}
+
+.butHome{
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-family: 'Small Pixel-7';
+    font-size: 25px;
+}

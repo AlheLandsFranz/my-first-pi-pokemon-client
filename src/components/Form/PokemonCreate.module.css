@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+.allForm{
+    background-image: url('./../Home/fondo.png');
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.home{
+        border: 2px solid black;
+        font-family: 'Small Pixel-7';
+        font-size: 30px;
+        padding: 0.5em 1.2em;
+        background: rgb(73, 72, 72);
+        color: white;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.6em;
+        cursor: pointer;
+        margin-top: 50px;
+}
+
+.home:hover{
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 500ms;
+    background-color: #0a66c2;
+    border-radius: 9999px;
+}
+
+.allForm h1{
+    color: aliceblue;
+    font-family: 'Small Pixel-7';
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.head{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+    align-items: baseline;
+    justify-content: center;
+    justify-items: center;
+}
+
+form {
+    background-image: url(./../Home/resources/form.jpg);
+    background-size: cover;
+    max-width: 365px;
+    padding: 50px 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 15px 15px 1px rgb(255 0 0 / 10%), 15px 15px 1px 2px rgba(255, 184, 69, 0.904);;
+    margin-bottom: 5%;
+    font-family: 'Small Pixel-7';
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 65px;
+    grid-row-gap: 11px;
+    justify-items: stretch;
+}
+
+.allInput{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Small Pixel-7';
+    font-size: 40px;
+    margin-bottom: 10pt;
+    border-bottom: 5px solid black;
+    background: rgba(255, 184, 69, 0.904);
+    max-width: 350px;
+    min-width: 100px;
+    outline: none;
+    color: black;
+    border-radius: 15px;
+    margin: 5px;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.allInput input{
+    font-size: 25px;
+    font-family: 'Small Pixel-7';
+    width: -webkit-fill-available;
+    margin: 5px;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
+}
+
+.numbers input{
+    width: 60px;
+}
+
+.types {
+    font-size: 25px;
+    font-family: 'Small Pixel-7';
+	margin: 0 auto;
+	color: rgba(255, 184, 69, 0.904);;
+	width: 310px;
+	padding: 15px;
+	height: 25px;
+	cursor: pointer;
+	background: url(http://sharpik.com/wip/cuteselect/arrow.png) 295px 12px no-repeat white;
+    display: block;
+}
+
+.types:hover {
+	background-color: transparent;
+	color: white;
+	padding: 15px 5px 15px 25px;
+}
+
+.types .typesOptions {
+	background-color: rgba(255, 184, 69, 0.904);;
+	color: rgb(7, 7, 7);
+	width: 310px;
+	padding: 10px 15px;
+	height: 20px;
+	cursor: pointer;
+    font-size: 25px;
+}
+.typesOptionTop{
+    background-color: rgba(255, 184, 69, 0.904);;
+	color: rgb(7, 7, 7);
+	width: 310px;
+	padding: 10px 15px;
+	height: 20px;
+	cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.types .typesOptions:hover {
+	padding-left: 25px;
+	width: 270px;
+	color: #ec6f66;
+}
+.tipesCharacter{
+    display: inline-flex;;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 15px;
+    font-size: 20px;
+    margin: 0%;
+}
+.buttonDelete{
+    background: rgba(255, 184, 69, 0.904);; 
+    border: 1px black solid;
+    border-radius: 15px;
+}
+
+.submitButton {
+    display: block;
+    font-family: 'Small Pixel-7';
+    font-size: 25px;
+    font-weight: lighter;
+    margin-top: 2%;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: rgba(255, 184, 69, 0.904);;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 1px #f76503, 3px 3px 1px 1px black;
+   }
+   
+.submitButton:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+  }
+.error{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Small Pixel-7';
+    font-weight: lighter;
+    margin: 0%;
+}
