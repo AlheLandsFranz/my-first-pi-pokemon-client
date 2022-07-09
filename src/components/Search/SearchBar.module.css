@@ -55,3 +55,9 @@
 .search:hover{
   animation: hoverShake 0.15s linear 3;
 }
+
+@media screen and (max-width: 820px){
+  .search:hover > .searchInput{
+    width: 80%;
+  }
+}

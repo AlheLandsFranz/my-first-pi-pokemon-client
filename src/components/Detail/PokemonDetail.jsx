@@ -30,7 +30,6 @@ console.log(myPokemon[0], "mypokemon")
             <img src={gif} className={style.gif} alt="Loading"/>  
          </div>
         : <div className={style.detail}>
-            <h1>Bio de {myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1>
             <div className={style.pokeDetail}>
                 <h1>{myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1>
                 { myPokemon[0].createdInDb &&
@@ -39,7 +38,7 @@ console.log(myPokemon[0], "mypokemon")
                   :<img src={img} alt='Parece que a este pokemón no le gustan las fotos'/> 
                 }
                 {
-                myPokemon[0].type?.map( ( t, i ) => (<p key={i}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
+                myPokemon[0].type?.map( ( t, i ) => (<p key={i} className={style.types}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
                 }
                 <p className={style.attributes}>Datos estadísticos:</p>
                 <p>Vida: {myPokemon[0].hp}</p>

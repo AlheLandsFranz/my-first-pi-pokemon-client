@@ -11,9 +11,9 @@
   font-weight: normal;
 }
 .home{
-    background-image: url('./fondo.png'); 
+    background-image: url(./resources/form.jpg); 
     background-size: cover;
-    background-color: rgb(236, 167, 37);
+    background-color: #79caf9;
     background-repeat: no-repeat;
     text-decoration: none;
 }
@@ -28,14 +28,19 @@
     flex-wrap: wrap;
     text-decoration: none;
 }
-
+a{
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+    max-width: 100%;
+}
 .cardsError{
-    background-color: rgb(237, 50, 55);
+    background-color: rgba(237, 50, 55, 0.2);
     background-size: 400% 400%;
     border-radius: 5%;
     margin: 0%;
     width: 20em;
-    height: 20em;
+    height: 24em;
     padding: 0.2em;
     box-shadow: 1px 1px 2px #d2b1b1,
                     -1px -1px 2px #e6c8c8;
@@ -44,15 +49,25 @@
     flex-wrap: wrap;
     justify-content: center;
     font-family: 'Small Pixel-7';
+    font-size: 1rem;
+}
+.cardsError img{
+    width: 8em;
+}
+.cardsError button{
+    cursor: pointer;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 12rem;
+    font-family: 'Small Pixel-7';
     font-size: 20px;
 }
 
 .navBar{
     background-image: url('./pokeball.png');
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
-    padding-bottom: 150px;
-
+    padding-bottom: 10%;
 }
 .butAgain{
     display: flex;
@@ -84,7 +99,7 @@
 .butAgain  .transition {
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-duration: 500ms;
-    background-color: #53ad34;
+    background-color: rgb(0, 4, 255, 0.594);
     border-radius: 9999px;
     width: 0;
     height: 0;
@@ -157,6 +172,56 @@
     padding-top: 0%;
     padding-right: 50px;
     margin: 0%;
+}
+
+@media screen and (max-width: 820px){
+    .cardsError{
+        width: 150px;
+        height: 220px;
+    }
+    .cardsError img{
+        width: 2.7rem;
+        margin-bottom: 0.1rem;
+        margin-top: 0.2rem;
+    }
+    .cardsError h1{
+        font-size: 1rem;
+    }
+    .butAgain{
+        margin: 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        padding: 14px;
+    }
+    .butAgain button{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+        padding: 5px;
+        font-size: 25px;
+        border-radius: 5px;
+        margin: 1%;
+    }
+    .filtrados{
+        margin: 0%;
+    }
+    .filtrados select{
+        font-size: 25px;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+    }
+    .searchBar{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0%;
+        padding: 5px;
+        width: 80%;
+    }
 }
 
 

@@ -8,6 +8,7 @@ import SearchBar from "../Search/SearchBar";
 import style from './Home.module.css'
 import styles from './Paginated.module.css'
 import gif from './resources/loading2.gif'
+import error from './resources/error.png'
 
 export default function Home(){
 
@@ -135,7 +136,8 @@ export default function Home(){
                     </Link>
                     </Fragment>) 
                 : <div className={style.cardsError}>
-                   <h1 className={style.error}>Prueba buscar otro pokemon ya que este no se encontro. O, intenta crearlo.</h1>
+                    <img src={error} alt='Error'/>
+                   <h1 className={style.error}>Ups, no se encontro tu pokemon. Intenta crearlo.</h1>
                     <Link to='/pokemon'><button>Pokemon Create</button></Link>
                   </div>
             : currentPoke.length > 1
