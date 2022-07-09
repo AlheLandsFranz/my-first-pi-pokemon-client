@@ -1,14 +1,15 @@
 // import axios from 'axios';
+const BASE_URL = "https://pi-pokemon-alhena-landsman.herokuapp.com/"
 
 export function getAllPokemons(){
-    return async (dispatch) => fetch("http://localhost:3001/pokemons") 
+    return async (dispatch) => fetch( BASE_URL+ "pokemons") 
         .then(response => response.json()) 
         .then(data => dispatch({ type: 'GET_ALL_POKEMONS', payload: data }))
         .catch(e => console.log(e))
 }
 
 export function getAllTypes(){
-    return async (dispatch) => fetch("http://localhost:3001/types")
+    return async (dispatch) => fetch( BASE_URL+ "types")
         .then(response => response.json())
         .then(data => dispatch({ type: 'GET_ALL_TYPES', payload: data }))
         .catch(e => console.log(e))
@@ -16,7 +17,7 @@ export function getAllTypes(){
 
 export function postPokemon(payload){
     return async () => {
-        return fetch("http://localhost:3001/pokemons", {
+        return fetch( BASE_URL+ "pokemons", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +31,7 @@ export function postPokemon(payload){
 // CON AXIOS
 // export function postPokemon(payload){
 //     return async function(dispatch){
-//         const response = await axios.post(`http://localhost:3001/pokemons`, payload);
+//         const response = await axios.post( BASE_URL+ `pokemons`, payload);
 //         return response;
 //         }
 // }
@@ -43,7 +44,7 @@ export function getPokemonByType(payload){
 
 export function getPokemonDetail(id){
     return async function(dispatch){
-        return fetch("http://localhost:3001/pokemons/"+id)
+        return fetch( BASE_URL+ "pokemons/"+id)
         .then(response => response.json())
         .then(data => dispatch({type: 'GET_POKEMON_DETAIL', payload: data})
         )
@@ -52,7 +53,7 @@ export function getPokemonDetail(id){
 }
 export function deletePokemon(payload){
     return async function(dispatch){
-        return fetch("http://localhost:3001/clear/"+payload, {
+        return fetch( BASE_URL+ "clear/"+payload, {
                 method: 'DELETE'}) 
         .then(response => response.json())         
         .then( () => dispatch({type: 'DELETE_POKEMON'}))
@@ -69,7 +70,7 @@ export function clearDetail(){
 
 export function searchByName(name){
     return async function(dispatch){
-        return fetch("http://localhost:3001/pokemons?name="+name) 
+        return fetch( BASE_URL+ "pokemons?name="+name) 
         .then(response => response.json())         
         .then(data => dispatch({type: 'SEARCH_BY_NAME', payload: data})
         )
