@@ -19,8 +19,8 @@
     border-radius: 8px;
 }
 a .card{
-    margin-left: 2%;
-    margin-bottom: 50px;
+    margin: 40px;
+    margin-top: 0px;
 }
   
 .card:hover {

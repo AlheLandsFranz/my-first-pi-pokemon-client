@@ -37,6 +37,7 @@ console.log(myPokemon[0], "mypokemon")
                 { myPokemon[0].image ? <img src={myPokemon[0].image} alt='Parece que a este pokemón no le gustan las fotos'/>
                   :<img src={img} alt='Parece que a este pokemón no le gustan las fotos'/> 
                 }
+                <div className={style.pokeData}>
                 {
                 myPokemon[0].type?.map( ( t, i ) => (<p key={i} className={style.types}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
                 }
@@ -48,6 +49,7 @@ console.log(myPokemon[0], "mypokemon")
                 <p className={style.bio}>Datos biograficos:</p>
                 <p>Altura: {myPokemon[0].height}</p>
                 <p>Peso: {myPokemon[0].weight}</p>
+                </div>
             </div>
         <Link to='/home'><button className={style.butHome}>Volver</button></Link>
         </div>

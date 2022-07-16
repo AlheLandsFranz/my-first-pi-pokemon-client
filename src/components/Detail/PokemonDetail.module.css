@@ -21,7 +21,7 @@ min-height: 890px;
     font-family: 'Small Pixel-7';
     backdrop-filter: blur(16px) saturate(180%);
     color: aliceblue;
-    background-color: rgba(236,167,37, 0.3);
+    background-color: #E5AA32;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 64px;
@@ -55,6 +55,10 @@ min-height: 890px;
     width: 30px;
     background-color: #ff00006e;
     border-radius: 15px;
+}
+
+.pokeData{
+    display: flex;
 }
 
 .butHome{
