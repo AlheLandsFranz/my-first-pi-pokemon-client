@@ -33,7 +33,7 @@ console.log(myPokemon[0], "mypokemon")
             <div className={style.pokeDetail}>
                 <h1>{myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1>
                 { myPokemon[0].createdInDb &&
-            <button onClick={() => handleDelete(myPokemon[0].id)}>X</button> } 
+            <button className={style.deleteButton} onClick={() => handleDelete(myPokemon[0].id)}>X</button> } 
                 { myPokemon[0].image ? <img src={myPokemon[0].image} alt='Parece que a este pokemón no le gustan las fotos'/>
                   :<img src={img} alt='Parece que a este pokemón no le gustan las fotos'/> 
                 }
@@ -48,7 +48,6 @@ console.log(myPokemon[0], "mypokemon")
                 <p className={style.bio}>Datos biograficos:</p>
                 <p>Altura: {myPokemon[0].height}</p>
                 <p>Peso: {myPokemon[0].weight}</p>
-                <p>Su ID: {myPokemon[0].id}</p>
             </div>
         <Link to='/home'><button className={style.butHome}>Volver</button></Link>
         </div>

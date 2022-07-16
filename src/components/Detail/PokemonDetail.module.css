@@ -51,6 +51,11 @@ min-height: 890px;
 .detail .gif{
     border-radius: 35%;
 }
+.deleteButton{
+    width: 30px;
+    background-color: #ff00006e;
+    border-radius: 15px;
+}
 
 .butHome{
     cursor: pointer;
