@@ -20,7 +20,7 @@ min-height: 890px;
 .pokeDetail{
     font-family: "Small Pixel-7";
     color: #f0f8ff;
-    background-image: url(/static/media/background.287f91c5.png);
+    background-image: url('./background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
