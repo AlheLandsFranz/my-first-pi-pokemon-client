@@ -38,9 +38,9 @@ console.log(myPokemon[0], "mypokemon")
                   :<img src={img} alt='Parece que a este pokemón no le gustan las fotos'/> 
                 }
                 <div className={style.pokeData}>
-                {
+                <div className={style.types}>{
                 myPokemon[0].type?.map( ( t, i ) => (<p key={i} className={style.types}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
-                }
+                }</div>
                 <p className={style.attributes}>Datos estadísticos:</p>
                 <p>Vida: {myPokemon[0].hp}</p>
                 <p>Fuerza de ataque: {myPokemon[0].attack}</p>

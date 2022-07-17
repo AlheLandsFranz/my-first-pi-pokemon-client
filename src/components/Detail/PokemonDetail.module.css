@@ -17,6 +17,10 @@ min-height: 890px;
     margin: 0%;
 }
 
+.types{
+    display: flex;
+}
+
 .pokeDetail{
     font-family: "Small Pixel-7";
     color: #f0f8ff;
