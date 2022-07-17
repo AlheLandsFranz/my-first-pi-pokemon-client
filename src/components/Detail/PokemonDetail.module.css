@@ -21,7 +21,7 @@ min-height: 890px;
     font-family: 'Small Pixel-7';
     backdrop-filter: blur(16px) saturate(180%);
     color: aliceblue;
-    background-image: './background.png';
+    background-image: url('./background.png');
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 12px;
