@@ -43,7 +43,7 @@ console.log(myPokemon[0], "mypokemon")
                 }</div>
                 <p className={style.attributes}>Datos estadísticos:</p>
                 <p>Vida: {myPokemon[0].hp}</p>
-                <p>Fuerza de ataque: {myPokemon[0].attack}</p>
+                <p>Ataque: {myPokemon[0].attack}</p>
                 <p>Defensa: {myPokemon[0].defense}</p>
                 <p>Velocidad: {myPokemon[0].speed}</p>
                 <p className={style.bio}>Datos biograficos:</p>
