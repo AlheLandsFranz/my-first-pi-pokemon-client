@@ -11,42 +11,41 @@ min-height: 890px;
 
 .pokeDetail h1{
     font-family: 'Small Pixel-7';
-    font-size: 65px;
+    font-size: 55px;
     font-weight: lighter;
     padding: 0%;
     margin: 0%;
 }
 
 .pokeDetail{
-    font-family: 'Small Pixel-7';
-    backdrop-filter: blur(16px) saturate(180%);
-    color: aliceblue;
-    background-image: url('./background.png');
-    background-size: contain;
+    font-family: "Small Pixel-7";
+    color: #f0f8ff;
+    background-image: url(/static/media/background.287f91c5.png);
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    padding: 64px;
+    padding: 20px 302px;
+    border: 1px solid hsla(0,0%,100%,.125);
     margin: 25px;
-    width: 35rem;
+    width: max-content;
     height: 20rem;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-direction: column;
-    align-items: stretch;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .pokeDetail .types{
     display: inline;
 }
 .pokeDetail p{
-    font-size: 30px;
+    font-size: 25px;
     margin: 0%;
 }
 .pokeDetail img{
     padding: 5%;
-    width: 11rem;
+    width: 7rem;
     margin-bottom: 0%;
 }
 
