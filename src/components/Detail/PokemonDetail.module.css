@@ -59,6 +59,9 @@ min-height: 890px;
 
 .pokeData{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .butHome{
