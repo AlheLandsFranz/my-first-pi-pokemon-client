@@ -3,18 +3,18 @@
     background-size: cover; 
     background-color: #a19e9e;
     display: grid;
-    align-items: center;
+    align-content: center;
     justify-items: center;
 width: 100%;
-min-height: 890px;
+min-height: 860px;
 }
 
 .pokeDetail h1{
     font-family: 'Small Pixel-7';
-    font-size: 55px;
+    font-size: 50px;
     font-weight: lighter;
-    padding: 0%;
-    margin: 0%;
+    padding: 25px;
+    margin: 0px;
 }
 
 .types{
@@ -34,7 +34,7 @@ min-height: 890px;
     border-radius: 12px;
     padding: 20px 302px;
     border: 1px solid hsla(0,0%,100%,.125);
-    margin: 25px;
+    margin: 0px;
     width: max-content;
     height: 20rem;
     display: flex;
@@ -47,13 +47,17 @@ min-height: 890px;
     display: inline;
 }
 .pokeDetail p{
-    font-size: 25px;
-    margin: 0%;
+    font-size: 22px;
+    margin: 0px 2px;
+    font-weight: lighter;
 }
 .pokeDetail img{
     padding: 5%;
     width: 7rem;
     margin-bottom: 0%;
+}
+.buttonHome{
+    display: flex;
 }
 
 .detail .gif{
@@ -73,22 +77,59 @@ min-height: 890px;
 }
 
 .butHome{
-    cursor: pointer;
-    margin-bottom: 30px;
+    border: 2px solid black;
     font-family: 'Small Pixel-7';
-    font-size: 25px;
+    font-size: 30px;
+    padding: 0.5em 1.2em;
+    background: rgb(73, 72, 72);
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6em;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.butHome:hover{
+transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+transition-duration: 500ms;
+background-color: #0a66c2;
+border-radius: 9999px;
 }
 
 @media screen and (max-width: 820px){
+
+    .detail{
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        width: 100%;
+        min-height: 850px;
+        align-items: center;
+        justify-content: space-around;
+    }
     .pokeDetail{
-        width: 15rem;
+        background-size: contain;
         height: 35rem;
+        display: flex;
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: #3d2a23;
     }
     .pokeDetail h1{
-        font-size: 35px;
-        margin: 5px;
+        display: flex;
+        font-size: 50px;
+        margin: 0px;
+        padding: 0%;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
     .pokeDetail p{
-        font-size: 22px;
+        font-size: 20px;
     }
 }
