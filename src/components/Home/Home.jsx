@@ -89,7 +89,7 @@ export default function Home(){
             <button onClick={(e) => handleRefresh(e)}><span className={style.transition}></span>
                 <span className={style.label}>Refresh</span></button>
 
-            <a href="https://www.linkedin.com/in/alhena-landsman-28ba5a18a/">
+            <a href="https://www.linkedin.com/in/alhena-landsman-full-stack-developer/">
                 <button className={style.linkedin}><span className={style.label}>Linkedin</span></button></a>
 
             </div>
