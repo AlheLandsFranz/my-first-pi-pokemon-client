@@ -1,5 +1,5 @@
 // import axios from 'axios';
-const BASE_URL = "https://pi-pokemon-alhena-landsman.herokuapp.com/"
+const BASE_URL = "https://pokemon-back.onrender.com/"
 
 export function getAllPokemons(){
     return async (dispatch) => fetch( BASE_URL+ "pokemons") 
