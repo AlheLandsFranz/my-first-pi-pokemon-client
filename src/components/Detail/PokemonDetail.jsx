@@ -7,51 +7,55 @@ import style from './PokemonDetail.module.css'
 import gif from './../Home/resources/Pan.gif'
 
 
-export default function PokemonDetail(){
+export default function PokemonDetail() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const history = useHistory()
- 
-useEffect(() => {
-        dispatch( getPokemonDetail( id) );    
-        return( () => dispatch( clearDetail() ) );
-}, [dispatch, id])
 
-function handleDelete(id){
-    dispatch(deletePokemon(id))
-    history.push('/home')
-};
-    const myPokemon = useSelector( state => state.pokemonDetail );
-console.log(myPokemon[0], "mypokemon")
+    useEffect(() => {
+        dispatch(getPokemonDetail(id));
+        return (() => dispatch(clearDetail()));
+    }, [dispatch, id])
 
-    return(
-        !myPokemon[0] 
-        ? <div className={style.detail}> 
-            <img src={gif} className={style.gif} alt="Loading"/>  
-         </div>
-        : <div className={style.detail}>
-            <div className={style.pokeDetail}>
-                <h1>{myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1>
-                { myPokemon[0].createdInDb &&
-            <button className={style.deleteButton} onClick={() => handleDelete(myPokemon[0].id)}>X</button> } 
-                { myPokemon[0].image ? <img src={myPokemon[0].image} alt='Parece que a este pokemón no le gustan las fotos'/>
-                  :<img src={img} alt='Parece que a este pokemón no le gustan las fotos'/> 
-                }
-                <div className={style.pokeData}>
-                <div className={style.types}>{
-                myPokemon[0].type?.map( ( t, i ) => (<p key={i} className={style.types}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
-                }</div>
-                <p className={style.attributes}>Datos estadísticos:</p>
-                <p>Vida: {myPokemon[0].hp}</p>
-                <p>Ataque: {myPokemon[0].attack}</p>
-                <p>Defensa: {myPokemon[0].defense}</p>
-                <p>Velocidad: {myPokemon[0].speed}</p>
-                <p className={style.bio}>Datos biograficos:</p>
-                <p>Altura: {myPokemon[0].height}</p>
-                <p>Peso: {myPokemon[0].weight}</p>
-                </div>
-            </div>
-        <Link to='/home'><button className={style.butHome}>Volver</button></Link>
+    function handleDelete(id) {
+        dispatch(deletePokemon(id))
+        history.push('/home')
+    };
+    const myPokemon = useSelector(state => state.pokemonDetail);
+    console.log(myPokemon[0], "mypokemon")
+
+    return (
+        <div className={style.container}>
+            {
+                !myPokemon[0]
+                    ? <div className={style.detail}>
+                        <img src={gif} className={style.gif} alt="Loading" />
+                    </div>
+                    : <div className={style.detail}>
+                        <div className={style.pokeDetail}>
+                            <h1>{myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1>
+                            {myPokemon[0].createdInDb &&
+                                <button className={style.deleteButton} onClick={() => handleDelete(myPokemon[0].id)}>X</button>}
+                            {myPokemon[0].image ? <img src={myPokemon[0].image} alt='Parece que a este pokemón no le gustan las fotos' />
+                                : <img src={img} alt='Parece que a este pokemón no le gustan las fotos' />
+                            }
+                            <div className={style.pokeData}>
+                                <div className={style.types}>{
+                                    myPokemon[0].type?.map((t, i) => (<p key={i} className={style.types}>{t.charAt(0).toUpperCase() + t.slice(1)}</p>))
+                                }</div>
+                                <p className={style.attributes}>Datos estadísticos:</p>
+                                <p>Vida: {myPokemon[0].hp}</p>
+                                <p>Ataque: {myPokemon[0].attack}</p>
+                                <p>Defensa: {myPokemon[0].defense}</p>
+                                <p>Velocidad: {myPokemon[0].speed}</p>
+                                <p className={style.bio}>Datos biograficos:</p>
+                                <p>Altura: {myPokemon[0].height}</p>
+                                <p>Peso: {myPokemon[0].weight}</p>
+                            </div>
+                        </div>
+                        <Link to='/home'><button className={style.butHome}>Volver</button></Link>
+                    </div>
+            }
         </div>
     );
 }
