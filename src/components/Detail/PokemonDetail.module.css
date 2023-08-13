@@ -44,7 +44,6 @@
     background-position: center;
     border-radius: 12px;
     padding: 20px 302px;
-    border: 1px solid hsla(0,0%,100%,.125);
     margin: 0px;
     width: max-content;
     height: 20rem;
@@ -121,7 +120,7 @@ border-radius: 9999px;
         justify-content: space-around;
     }
     .pokeDetail{
-        background-size: contain;
+        background-image: none;
         height: 35rem;
         display: flex;
         margin: 0%;
